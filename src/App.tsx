@@ -7,7 +7,7 @@ import './App.scss';
 
 export default function App() {
     const [machines, setMachines] = useState<Machine[]>([]);
-    const [openErrorSnackbar, setSnackbarOpen] = useState(false);
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
 
     useEffect(() => {
         async function getMachines(): Promise<void> {
@@ -36,7 +36,7 @@ export default function App() {
             <MachineMap machines={machines} />
             <MachineList machines={machines} />
             <SimpleSnackbar
-                open={openErrorSnackbar}
+                open={snackbarOpen}
                 handleClose={() => setSnackbarOpen(false)} />
         </div>
     )
