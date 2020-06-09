@@ -68,5 +68,5 @@ function MachineMap(props: {machines: Machine[], google: any}) {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyC1QEJB_1iq8-N9zhpOCHk6m_VEFA1XdmM'
+    apiKey: 'Add your API Key'
   })(MachineMap);
